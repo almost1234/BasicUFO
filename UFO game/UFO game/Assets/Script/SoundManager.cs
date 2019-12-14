@@ -2,6 +2,9 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+
+// I see you didn't use this function in the end
+[System.Obsolete]
 public class SoundManager : MonoBehaviour
 {
 

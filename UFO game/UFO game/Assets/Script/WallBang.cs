@@ -2,6 +2,9 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+/// <summary>
+/// Standard audio control for on collision with wall
+/// </summary>
 public class WallBang : MonoBehaviour
 {
     

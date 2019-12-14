@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+// Default camera controller from tutorial
 public class CameraController : MonoBehaviour
 {
     public GameObject Player;

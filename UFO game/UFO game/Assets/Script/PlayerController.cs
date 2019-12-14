@@ -9,7 +9,7 @@ public class PlayerController : MonoBehaviour
     public float speed;
     public Text countText;
     public Text winText;
-    public bool action;
+    public bool action; // Using boolean to check if process input or not
 
     
     public GameObject Collectibles;
@@ -19,6 +19,7 @@ public class PlayerController : MonoBehaviour
     private Rigidbody2D rb2d;
     private int count;
 
+    // Standard monobehaviour code initialize
     void Start()
     {
         collectibles = GetComponent<AudioSource>();
@@ -44,6 +45,7 @@ public class PlayerController : MonoBehaviour
 
     void FixedUpdate()
     {
+        // Process input
         if (action == true)
         {
             gameObject.SetActive(action);
@@ -103,15 +105,13 @@ public class PlayerController : MonoBehaviour
     }
     private void OnTriggerEnter2D(Collider2D other)
     {
-            if (other.gameObject.CompareTag("PickUp"))
+        if (other.gameObject.CompareTag("PickUp")) // Fix your tabbing
         {
             other.gameObject.SetActive(false);
             count = count + 1;
             SetCountText();
             collectibles.Play();
-            
-
-        }
+        } // Delete unnecessary spaces
     }
     void SetCountText()
     {
@@ -124,7 +124,7 @@ public class PlayerController : MonoBehaviour
             WinScreen.SetActive(true);
             action = false;
             countText.text = "";
-            }
+        } // Fix your brackets
     }
 }
    

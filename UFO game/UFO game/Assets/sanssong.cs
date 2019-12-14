@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class sanssong : MonoBehaviour
 {
-    AudioSource playsans;
+    AudioSource playsans; // Can be serialized
     void Start()
     {
         playsans = GetComponent<AudioSource>();
@@ -17,6 +17,7 @@ public class sanssong : MonoBehaviour
     }
     void OnCollisionEnter2D(Collision2D collision)
     {
+        // Good try on an easter egg
         if (collision.gameObject.tag == "Player")
         {
             playsans.Play();
